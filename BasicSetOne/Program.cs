@@ -36,6 +36,36 @@ namespace BasicSetOne
             Person jay = new Person("Jay", "Jackson", 22);
             Person paul = new Person("Paul", 83);
 
+
+            // 4) White a doMath method that takes three parameters: operation, numOne, and numTwo.
+            //    The method should then return correct calculations based upon the arguments.
+            //
+            //    For example:
+            //    doMath('add', 2, 2) returns 4
+            //    doMath('add', 2, 2) returns 4
+            //    
+            //    The method should handle add, subtract, multiply, divide, and mod(modulus).
+            //    If an unknown operator is used it should write "Operation not available" to the console.
+
+            double doMath(string operation, double numOne, double numTwo)
+            {
+                switch (operation.ToLower())
+                {
+                    case "add":
+                        return numOne + numTwo;
+                    case "subtract":
+                        return numOne - numTwo;
+                    case "multiply":
+                        return numOne * numTwo;
+                    case "divide":
+                        return numOne / numTwo;
+                    case "mod":
+                        return numOne % numTwo;
+                    default:
+                        Console.WriteLine("Operation not available.");
+                        return 0;
+                }
+            }
         }
     }
 }
