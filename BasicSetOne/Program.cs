@@ -18,6 +18,13 @@ namespace BasicSetOne
                 return first + " " + last;
             }
 
+            // 2) Create a method that accepts two numbers as parameters and then returns
+            //    their product
+
+            double Multiply(double numOne, double numTwo)
+            {
+                return numOne * numTwo;
+            }
         }
     }
 }
