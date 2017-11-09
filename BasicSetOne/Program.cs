@@ -65,6 +65,38 @@ namespace BasicSetOne
                         Console.WriteLine("Operation not available.");
                         return 0;
                 }
+
+
+                // 5) Given an array of ints, write a method to total all the values that are even numbers.
+
+                // Standard
+                int sumEvens(int[] numbers)
+                {
+                    int total = 0;
+                    foreach (int n in numbers)
+                    {
+                        if (n%2==0)
+                        {
+                            total += n;
+                        }
+                    }
+                    return total;
+                }
+
+                // Using LINQ
+                int sumEvensLinqOne(int[] numbers)
+                {
+                    var evens = from n in numbers
+                                where n % 2 == 0
+                                select n;
+                    return evens.Sum();
+                }
+                
+                // One line
+                int sumEvensLinqTwo(int[] numbers)
+                {
+                    return (from n in numbers where n % 2 == 0 select n).Sum();
+                }
             }
         }
     }
